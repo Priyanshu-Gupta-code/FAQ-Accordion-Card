@@ -1,0 +1,181 @@
+body {
+    background:linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    padding: 90px 200px;
+}
+
+/**************************************** Layout Section *****************************************/
+
+.layout {
+    background-color: #fff;
+    height: fit-content;
+    min-height: 585px;
+    border-radius: 1.5625rem;
+    position: relative;
+    
+}
+
+/******* First image(The box) ******/
+.box-img {
+    position: absolute;
+    top: 280px;
+    left: -92px;;
+    z-index: 2;
+}
+
+/******* Seconde image i.e., Women standing ********/
+.woman-img-container {
+    overflow: hidden;
+    max-width: 390px;
+    direction: rtl;
+    position: absolute;
+    top: 150px;
+    z-index: 1;
+}
+
+/******* The big pattern image ******/
+
+.big-pattern-img-container {
+    overflow: hidden;
+    height: 586px;
+    width: 390px;
+    direction: rtl;
+}
+
+.big-pattern-img {
+    position: relative;
+    bottom: 220px;
+}
+
+/**************** FAQ section ******************/
+
+.FAQ {
+    position: absolute;
+    right: 120px;
+    top:10px;
+    width: 400px;
+}
+
+.FAQ h1 {
+    font-family: 'Kumbh Sans';
+    font-weight: 700;
+}
+
+div.accordion {
+    position: relative;
+}
+
+/* Making the question bold, which is in paragrah element.When we click the question */
+.black p {
+    font-family: 'Kumbh Sans';
+    font-weight: bold;
+}
+
+.accordion-question {
+    font-family: 'Kumbh Sans';
+    color:hsl(237, 12%, 33%) ;
+    margin-bottom: 10px;
+}
+
+
+.img:hover {
+    color: orange;
+}
+
+.accordion-question img {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.accordion.active img{
+    position: absolute;
+    top:9px;
+    transform:rotate(180deg);
+}
+
+/*** Making the answer disappear. ***/
+.accordion-answer {
+    display:none;
+}
+
+/* Making the answer appear when the user has clicked the particular question. */
+.accordion.active .accordion-answer {
+  display: block;
+  color:hsl(240, 6%, 50%) ;
+  font-weight: lighter;
+  font-family: "kumbh Sans";
+  font-size: 15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: white;
+  }
+
+/************ Mobile Size ************/
+
+@media(max-width:555px){
+
+    body {
+        padding:150px 20px 100px;
+    }
+
+    .layout {
+        position: relative;
+        padding-bottom: 50px;
+        height: 645px;
+    }
+
+    .woman-img-container {
+        position: absolute;
+        top: -120px;
+        right: 90px;        
+    }
+
+    .woman-img-container img {
+        height: 200px;
+    }
+
+    .box-img {
+        position: absolute;
+        top: -49px;
+        left: 65px;
+        height:110px;
+    }
+
+    .big-pattern-img-container {
+        background-image: url("images/bg-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        /* top:-400px */
+        top: 3px;
+        left: 85px;
+    }
+
+    .big-pattern-img {
+        display: none;
+    }
+
+    .FAQ {
+        position: absolute;
+        left: 10px;
+        top: 130px;
+    }
+
+    .FAQ h1 {
+        text-align: center;
+    }
+
+    .accordion {
+        padding: 0 10px;
+    }
+
+    .accordion.active .accordion-answer {
+        font-size: 14px;
+    }
+
+}
