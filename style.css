@@ -80,6 +80,11 @@ body {
     filter: brightness(180%);
 }
 
+/* rotating the arrow when the question is clicked */
+.accordion.active img{
+    transform:rotate(180deg);
+}
+
 /*** Making the answer disappear. ***/
 .accordion-answer {
     display: none;
